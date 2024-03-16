@@ -13,7 +13,10 @@ const logout = async (e) => {
         method: "GET",
     });
 
+    console.log(res);
+
     const json = await res.json();
+    console.log(json)
     if (json) {
         let username = sessionStorage.getItem('username');
         sessionStorage.removeItem('username');
